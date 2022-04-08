@@ -1,3 +1,13 @@
+/* ----------------- */
+/* custom properties */
+/* ----------------- */
+:root {
+  --clr-dark: 230 35% 7%;
+  --clr-light: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+  --clr-cream: 23 0% 95%
+}
+
 /* -------------------------- */
 /*  Reset */
 /* -------------------------- */
@@ -62,41 +72,82 @@ select {
 /* -------------------------- */
 
 .flex {
-    display: flex;
-    gap: var(--gap, 1rem);
+  display: flex;
+  gap: var(--gap, 1rem);
+  flex-wrap: wrap;
 }
 
 .grid {
-    display: grid;
-    gap: var(--gap, 1rem);
+  display: grid;
+  gap: var(--gap, 1rem);
 }
 
 .container {
-    max-width: 80rem;
-    margin-inline: auto;
-    padding-inline: 2em;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 2em;
 }
 /* screen reader only- reading page to someone who is visually imparred */
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip-path: rect(0,0,0,0);
-    white-space: nowrap;  /*  added line */
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /*  added line */
+  border: 0;
 }
 
-.box{
-    background: lightblue;
-    padding: 3rem;
+.box {
+  padding-inline: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .call-to-action {
-    background: pink;
-    padding: 2rem;
-    border-radius: 1rem;
-    --gap: 5rem;
+  background: pink;
+  padding: 2rem;
+  border-radius: 1rem;
+  --gap: 5rem;
 }
+
+/* colors */
+.bg-dark {
+  background-color: hsl(var(--clr-dark));
+}
+.bg-accent {
+  background-color: hsl(var(--clr-light));
+}
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+.bg-cream {
+    background-color: hsl(var(--clr-cream));
+}
+
+.text-dark {
+  color: hsl(var(--clr-dark));
+}
+.text-accent {
+  color: hsl(var(--clr-light));
+}
+.text-white {
+  color: hsl(var(--clr-white));
+}
+
+.example-component {
+    background-color: hsl(var(--clr-light) / .2);
+}
+.dsgn-container {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 2em;
+}
+
+/* .dsgn-box {
+    max-width: 30rem;
+    padding-inline: 2em;
+    margin-inline: auto;
+} */
