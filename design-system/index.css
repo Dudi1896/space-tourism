@@ -258,3 +258,22 @@ select {
   margin-right: 0.5em;
   font-weight: 700;
 }
+
+.large-button{
+  border: 1px solid;
+  
+}
+
+/* ----------------- */
+/* components */
+/* ----------------- */
+
+.large-button{
+  padding: 1 2em;
+  place-items: center;
+  display: grid;
+  aspect-ratio: 1;
+
+  text-decoration: none;
+  border-radius: 50%;
+}
